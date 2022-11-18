@@ -35,6 +35,7 @@ namespace BootCampStudyBuddyBackEnd.Models
         public static void Delete(int id)
         {
             favoriteqa fav = new favoriteqa() { id = id };  
+            DB.Delete(fav);
         }
 
         public static void Update (favoriteqa fav)
