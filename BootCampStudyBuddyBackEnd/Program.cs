@@ -20,6 +20,8 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 app.UseCors("LocalOriginsPolicy");
 
+app.UseCors("LocalOrginsPolicy");
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

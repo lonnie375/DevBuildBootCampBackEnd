@@ -10,7 +10,7 @@ namespace BootCampStudyBuddyBackEnd.Models
         public int id { get; set; }
         public string question { get; set; }
         public string answer { get; set; }
-        public int userid { get; set; }
+        public string userid { get; set; }
 
         public static MySqlConnection DB; 
 
@@ -35,6 +35,7 @@ namespace BootCampStudyBuddyBackEnd.Models
         public static void Delete(int id)
         {
             favoriteqa fav = new favoriteqa() { id = id };  
+            DB.Delete(fav);
         }
 
         public static void Update (favoriteqa fav)
